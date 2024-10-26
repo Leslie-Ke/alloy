@@ -1,0 +1,144 @@
+//out:../css/
+// 导航
+.bg-body-tertiary{
+    background-color: transparent !important;
+    .navbar-collapse{
+        flex-grow: 0;
+    }
+}
+.container{
+    padding: 10px 0;
+    .active{
+        color: #f2b535 !important;
+        border-bottom: 4px solid #f2b535;
+    }
+    .nav-link{
+        color: white;
+    }
+    .nav-item{
+        a:hover{
+            color: #f2b535;
+            background: none;
+        }
+    }
+}
+.navbar-toggler-icon {
+    background-image: url('data:image/svg+xml;charset=utf8,%3Csvg viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath stroke="white" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M4 7h22M4 15h22M4 23h22"/%3E%3C/svg%3E');
+}
+
+// 轮播
+.carousel{
+    .carousel-item{
+        height: 500px;
+        background-size: cover;
+        background-position: center;
+    }
+    @media (max-width: 767px) {
+        .carousel-item {
+            height: 250px; /* 屏幕宽度小于 768px 时 */
+        }
+    }
+
+    @media (min-width: 768px) and (max-width: 991px) {
+        .carousel-item {
+            height: 400px; /* 屏幕宽度 768px 到 991px 时 */
+        }
+    }
+
+    @media (min-width: 992px) {
+        .carousel-item {
+            height: 500px; /* 屏幕宽度大于等于 992px 时 */
+        }
+    }
+    
+    .carousel-item:nth-last-child(1){
+        background-image: url(../assets/uploads/banner_1.jpg);
+    }
+    .carousel-item:nth-last-child(2){
+        background-image: url(../assets/uploads/banner_2.jpg);
+    }
+    .carousel-item:nth-last-child(3){
+        background-image: url(../assets/uploads/banner_3.jpg);
+    }
+    .carousel-item:nth-last-child(4){
+        background-image: url(../assets/uploads/banner_4.jpg);
+    }
+}
+// 开源
+.project{
+    margin-top: 60px;
+    text-align: center;     
+    .title{
+        span{
+            font-size: 30px;
+            margin-right: 10px;
+        }
+        b{
+            font-size: 30px;
+        }
+        p{
+            margin-top: 10px;
+            font-size: 16px;
+            color: #919191;
+        }
+    }
+    .content{
+        .row{
+            .pro{
+                transition: all .3s ease;
+            }
+            .pro:hover{
+                transform: translateY(-6px);
+                box-shadow: 0 26px 40px -24px rgba(0,36,100,.5);
+            }
+            div{
+                transition: all .3s ease;
+                height: 200px;
+                margin-bottom: 15px;
+                a{
+                    display: block;
+                    color: white;
+                    text-decoration: none;
+                    height: 200px;
+                    border-radius: 4px;
+                    .art{
+                        padding: 20px 10px;
+                    }
+                    .im{
+                        height: 60px;
+                        overflow: hidden;
+                        display: inline-block;
+                        img{
+                            vertical-align: middle;
+                            height: 100%;
+                        }
+                    }
+                }
+                &:nth-child(1) a{
+                    background-color: #70c3ff;
+                }
+                &:nth-child(2) a{
+                    background-color: #fd6a7f;
+                }
+                &:nth-child(3) a{
+                    background-color: #7f8ea0;
+                }
+                &:nth-child(4) a{
+                    background-color: #89d04f;
+                }
+            }
+        }
+    }
+}
+.btn-lg{
+    border-color: #cccccc;
+    background-color: #e1e1e1;
+    color: #616161;
+    font-weight: 400;
+}
+.btn-lg:hover{
+    color: #333333;
+    background-color: #e6e6e6;
+    border-color: #adadad;
+    text-decoration: none;
+}
